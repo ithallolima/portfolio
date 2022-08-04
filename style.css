@@ -61,7 +61,7 @@ button {
     background-color: var(--primary-color);
     position: absolute;
     color: var(--black);
-    bottom: 16rem;
+    bottom: 8rem;
     font-weight: 6  00;
     letter-spacing: .05rem;
     transition: background-color .5s ease;
@@ -71,4 +71,16 @@ button {
 
 button:hover {
     background: hsl(85, 95%, 70%);
+}
+
+@media screen and (max-width: 768px) {
+    :root {
+        font-size: 55%;
+    }    
+}
+
+@media screen and (max-width: 375px) {
+    :root {
+        font-size: 45%;
+    }    
 }
