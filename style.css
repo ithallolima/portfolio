@@ -2,13 +2,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
 }
 
 :root {
     
     /* Colors */
     
-    --bg-color: #161616;
+    --bg-color: #121212;
     --text-color: #fdfdfd;
 
     --black: #121212;
@@ -24,11 +26,7 @@
 body {
     background: var(--bg-color);
     color: var(--text-color);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 2.4rem;
+    text-align: center;
 
     font-family: 'Biryani', sans-serif;
 
@@ -39,44 +37,96 @@ h1, p, button {
     text-transform: uppercase;
 }
 
+nav {
+    text-transform: lowercase;
+}
+
 h1 {
     padding: 1rem 2rem .5rem 2rem;
-    font-size: 4.8rem;
-    color: var(--text-color);
-    border-bottom: .15rem solid var(--primary-color);
-    font-weight: 900;
-}
-
-p {
+    font-weight: 800;
     font-size: 1.6rem;
     font-weight: 200;
-    opacity: .8;
+    opacity: .75;
 }
 
-button {
+
+.social-media {
+    display: flex;
+    gap: 1.6rem;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.social-media a {
+    color: var(--primary-color);
     font-size: 1.6rem;
-    padding: 1.6rem 2.8rem;
-    outline: none;
-    border: none;
-    background-color: var(--primary-color);
-    position: absolute;
-    color: var(--black);
-    bottom: 8rem;
-    font-weight: 6  00;
-    letter-spacing: .05rem;
-    transition: background-color .5s ease;
-
-    cursor: pointer;
 }
 
-button:hover {
-    background: hsl(85, 95%, 70%);
+.social-media a svg {
+    fill: var(--primary-color);
+    border-radius: .4rem;
+    width: 3.2rem;
+    height: 3.2rem;
+    transition: fill .3s ease;
+    
 }
+
+.social-media a svg:hover {
+    fill: hsl(85, 95%, 75%);
+}
+
+main {
+    background: var(--primary-color);
+    width: 80%;
+    height: 36rem;
+    color: black;
+    margin-block: 2.4rem;
+
+    transform: translateX(-50%);
+
+    position: relative;
+    left: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+#logo {
+    margin-top: 2rem;
+}
+
+nav {
+    display: flex;
+    gap: 2.4rem;
+    justify-content: center;
+}
+
+nav a {
+    color: var(--text-color);
+    font-size: 1.6rem;
+    font-weight: 600;
+
+    transition: color .4s ease;
+}
+
+nav a:hover {
+    color: var(--primary-color);
+}
+
+/* MEDIA QUERIES */
 
 @media screen and (max-width: 768px) {
     :root {
         font-size: 55%;
-    }    
+    }
+
+    #logo img {
+        width: 20rem;
+    }
 }
 
 @media screen and (max-width: 375px) {
